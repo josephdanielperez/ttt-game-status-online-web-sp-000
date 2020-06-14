@@ -17,18 +17,14 @@ WIN_COMBINATIONS = [
 [6,4,2] # right_diagonal
 ]
 
-top_row_win = WIN_COMBINATIONS[0]
-middle_row_win = WIN_COMBINATIONS[1]
-bottom_row_win = WIN_COMBINATIONS[2]
-left_column_win = WIN_COMBINATIONS[3]
-center_column_win = WIN_COMBINATIONS[4]
-right_column_win = WIN_COMBINATIONS[5]
-left_diagonal_win = WIN_COMBINATIONS[6]
-right_diagonal_win = WIN_COMBINATIONS[7]
-
-
 def won?(board)
  WIN_COMBINATIONS.each do |win_combination|
-
+   win_index_1 = win_combination[0]
+   win_index_2 = win_combination[1]
+   win_index_3 = win_combination[2]
+   position_1 = board[win_index_1] # value of board at win_index_1
+   position_2 = board[win_index_2] # value of board at win_index_2
+   position_3 = board[win_index_3] # value of board at win_index_3
+   position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
  end
 end
