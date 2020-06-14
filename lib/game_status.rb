@@ -17,16 +17,13 @@ WIN_COMBINATIONS = [
 [6,4,2] # right_diagonal
 ]
 
-win1 = WIN_COMBINATIONS[0]
-win2 = WIN_COMBINATIONS[1]
-win3 = WIN_COMBINATIONS[2]
-win4 = WIN_COMBINATIONS[3]
-win5 = WIN_COMBINATIONS[4]
-win6 = WIN_COMBINATIONS[5]
-win7 = WIN_COMBINATIONS[6]
-win8 = WIN_COMBINATIONS[7]
-
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
+    win_combination.each do |position|
+      if position.each == "X" || postion.each == "O"
+        return true
+      else postion.each != "X" || postion.each != "O"
+        return false
+    end
   end
 end
