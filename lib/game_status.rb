@@ -17,6 +17,16 @@ WIN_COMBINATIONS = [
 [6,4,2] # right_diagonal
 ]
 
+top_row_win = WIN_COMBINATIONS[0]
+middle_row_win = WIN_COMBINATIONS[1]
+bottom_row_win = WIN_COMBINATIONS[2]
+left_column_win = WIN_COMBINATIONS[3]
+center_column_win = WIN_COMBINATIONS[4]
+right_column_win = WIN_COMBINATIONS[5]
+left_diagonal_win = WIN_COMBINATIONS[6]
+right_diagonal_win = WIN_COMBINATIONS[7]
+
+
 def won?(board)
  WIN_COMBINATIONS.each do |win_combination|
 
