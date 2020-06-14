@@ -24,6 +24,7 @@ def won?(board)
         return true
       else postion.each != "X" || postion.each != "O"
         return false
+      end
     end
   end
 end
