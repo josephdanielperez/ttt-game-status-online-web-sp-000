@@ -6,8 +6,6 @@ def position_taken?(board, index)
 end
 
 # Define your WIN_COMBINATIONS constant
-def won?(board)
-  
 WIN_COMBINATIONS = [
 [0,1,2], # top_row
 [3,4,5], # middle_row
@@ -19,6 +17,7 @@ WIN_COMBINATIONS = [
 [6,4,2] # right_diagonal
 ]
 
+def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
     win_combination.each do |position|
       if position.each == "X" || postion.each == "O"
